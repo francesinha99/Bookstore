@@ -1,0 +1,23 @@
+﻿@{
+}
+
+@model BooksViewModel
+
+<h1>Michael's Bookstore</h1>
+
+@foreach (Book b in Model.Books)
+{
+    <h3>@b.Title</h3>
+
+    <ul>
+        <li>Project Type: @p.ProjectType</li>
+        <li>Regional Program: @p.ProjectRegionalProgram</li>
+        <li>Impact: @p.ProjectImpact Served</li>
+        <li>Project phase: @p.ProjectPhase</li>
+        <li>Project Status: @p.ProjectFunctionalityStatus</li>
+    </ul>
+
+    <br />
+}
+
+<div page-blah="@Model.PageInfo" page-action="Index"></div>
