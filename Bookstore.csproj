@@ -25,9 +25,15 @@
     <Folder Include="Views\Home\" />
     <Folder Include="Views\Shared\" />
     <Folder Include="Models\ViewModels\" />
+    <Folder Include="wwwroot\lib\" />
+    <Folder Include="wwwroot\lib\js\" />
+    <Folder Include="wwwroot\lib\css\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
+    <Content Remove="wwwroot\lib\" />
+    <Content Remove="wwwroot\lib\js\" />
+    <Content Remove="wwwroot\lib\css\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.22">
