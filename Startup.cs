@@ -52,6 +52,12 @@ namespace Bookstore
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name: "Paging",
+                    pattern: "Page{pageNum}",
+                    defaults: new { controller = "Home", action = "Index" });
+                    
+
                 endpoints.MapDefaultControllerRoute();
             });
         }

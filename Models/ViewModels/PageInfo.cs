@@ -8,7 +8,7 @@ namespace Bookstore.Models.ViewModels
         public int CurrentPage { get; set; }
 
         //Figure out how many pages we need
-        //Cast to double and then into to get actual number includig decimal value
+        //Cast to double and then into to get actual number including decimal value
         //Use math.ceiling to always round result up
         public int TotalPages => (int)Math.Ceiling((double)TotalNumBooks / BooksPerPage);
     }
