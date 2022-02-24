@@ -16,7 +16,7 @@ namespace Bookstore.Components
 
         public IViewComponentResult Invoke()
         {
-            ViewBag.SelectedType = RouteData?.Values["projectType"];
+            ViewBag.SelectedType = RouteData?.Values["bookCategory"];
 
             var types = repo.Books
                 .Select(x => x.Category)

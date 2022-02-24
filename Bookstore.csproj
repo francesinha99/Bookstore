@@ -16,6 +16,8 @@
     <None Remove="Views\Shared\" />
     <None Remove="Models\ViewModels\" />
     <None Remove="Components\" />
+    <None Remove="Views\Shared\Components\" />
+    <None Remove="Views\Shared\Components\Categories\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -30,6 +32,8 @@
     <Folder Include="wwwroot\lib\js\" />
     <Folder Include="wwwroot\lib\css\" />
     <Folder Include="Components\" />
+    <Folder Include="Views\Shared\Components\" />
+    <Folder Include="Views\Shared\Components\Categories\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
