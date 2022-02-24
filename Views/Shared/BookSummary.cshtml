@@ -13,7 +13,7 @@
         </span>
     </div>
 
-    
+
 
     <ul>
         <li>Author: @Model.Author</li>
@@ -24,4 +24,15 @@
         <li>Page Count: @Model.PageCount</li>
     </ul>
 
+    <form method="post" asp-page="/Order">
+
+        <input type="hidden" asp-for="@Model.BookId" />
+
+        <span class="card-text">
+            <button type="submit" class="btn btn-success btn-sm float-end">Order</button>
+        </span>
+
+    </form>
+
 </div>
+
