@@ -20,6 +20,7 @@
     <None Remove="Views\Shared\Components\Categories\" />
     <None Remove="Pages\" />
     <None Remove="Views\Order\" />
+    <None Remove="Views\Shared\Components\BasketSummary\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -38,6 +39,7 @@
     <Folder Include="Views\Shared\Components\Categories\" />
     <Folder Include="Pages\" />
     <Folder Include="Views\Order\" />
+    <Folder Include="Views\Shared\Components\BasketSummary\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
