@@ -35,9 +35,9 @@ namespace Bookstore.Pages
             return RedirectToPage(new { ReturnUrl = returnUrl });
         }
 
-        public IActionResult OnPostRemove(int projectId, string returnUrl)
+        public IActionResult OnPostRemove(int bookId, string returnUrl)
         {
-            basket.RemoveItem(basket.Items.First(x => x.Book.BookId == projectId).Book);
+            basket.RemoveItem(basket.Items.First(x => x.Book.BookId == bookId).Book);
 
             return RedirectToPage(new { ReturnUrl = returnUrl });
         }
