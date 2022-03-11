@@ -21,6 +21,7 @@
     <None Remove="Pages\" />
     <None Remove="Views\Order\" />
     <None Remove="Views\Shared\Components\BasketSummary\" />
+    <None Remove="Pages\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -32,20 +33,17 @@
     <Folder Include="Views\Shared\" />
     <Folder Include="Models\ViewModels\" />
     <Folder Include="wwwroot\lib\" />
-    <Folder Include="wwwroot\lib\js\" />
-    <Folder Include="wwwroot\lib\css\" />
     <Folder Include="Components\" />
     <Folder Include="Views\Shared\Components\" />
     <Folder Include="Views\Shared\Components\Categories\" />
     <Folder Include="Pages\" />
     <Folder Include="Views\Order\" />
     <Folder Include="Views\Shared\Components\BasketSummary\" />
+    <Folder Include="Pages\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
     <Content Remove="wwwroot\lib\" />
-    <Content Remove="wwwroot\lib\js\" />
-    <Content Remove="wwwroot\lib\css\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.22">
