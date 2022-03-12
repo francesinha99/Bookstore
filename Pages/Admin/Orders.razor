@@ -1,7 +1,44 @@
-﻿@page "/admin/books"
+﻿@page "/admin/orders"
 
-<h3>Projects</h3>
+@inherits OwningComponentBase<IOrderRepository>
 
-@code {
+
+<OrderTable TableTitle="Uncollected Orders" Orders="UncollectedOrders"
+               ButtonLabel="Collected" OrderSelected="CollectOrder"></OrderTable>
+
+<OrderTable TableTitle="Collected Orders" Orders="CollectedOrders"
+               ButtonLabel="Reset" OrderSelected="ResetOrder"></OrderTable>
+
+<button class="btn btn-info" @onclick="@(x => UpdateData())">Refresh Data</button>
+
+@code
+{
+    public IOrderRepository repo => Service;
+
+    public IEnumerable<Order> AllOrders { get; set; }
+    public IEnumerable<Order> UncollectedOrders { get; set; }
+    public IEnumerable<Order> CollectedOrders { get; set; }
+
+    protected async override Task OnInitializedAsync()
+    {
+        await UpdateData();
+    }
+
+    public async Task UpdateData()
+    {
+        AllOrders = await repo.Order.ToListAsync();
+        UncollectedOrders = AllOrders.Where(x => !x.OrderReceived);
+        CollectedOrders = AllOrders.Where(x => x.OrderReceived);
+    }
+
+    public void CollectOrder(int id) => UpdateOrder(id, true);
+    public void ResetOrder(int id) => UpdateOrder(id, false);
+
+    private void UpdateOrder(int id, bool ordered)
+    {
+        Order o = repo.Order.FirstOrDefault(x => x.OrderId == id);
+        o.OrderReceived = ordered;
+        repo.SaveOrder(o);
+    }
 
 }
