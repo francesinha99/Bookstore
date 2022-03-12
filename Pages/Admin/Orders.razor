@@ -3,10 +3,10 @@
 @inherits OwningComponentBase<IOrderRepository>
 
 
-<OrderTable TableTitle="Uncollected Orders" Orders="UncollectedOrders"
+<OrderTable TableTitle="Pending Orders" Orders="UncollectedOrders"
                ButtonLabel="Collected" OrderSelected="CollectOrder"></OrderTable>
 
-<OrderTable TableTitle="Collected Orders" Orders="CollectedOrders"
+<OrderTable TableTitle="Shipped Orders" Orders="CollectedOrders"
                ButtonLabel="Reset" OrderSelected="ResetOrder"></OrderTable>
 
 <button class="btn btn-info" @onclick="@(x => UpdateData())">Refresh Data</button>
