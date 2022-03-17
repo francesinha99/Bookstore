@@ -22,6 +22,8 @@
     <None Remove="Views\Order\" />
     <None Remove="Views\Shared\Components\BasketSummary\" />
     <None Remove="Pages\Admin\" />
+    <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+    <None Remove="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -40,6 +42,7 @@
     <Folder Include="Views\Order\" />
     <Folder Include="Views\Shared\Components\BasketSummary\" />
     <Folder Include="Pages\Admin\" />
+    <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
@@ -55,5 +58,6 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.22" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.23" />
   </ItemGroup>
 </Project>
